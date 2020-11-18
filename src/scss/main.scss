@@ -1,13 +1,163 @@
-@import "~normalize.css";
-
-@import "_variables";
-@import "modules/hello.scss";
-
 body {
-  background: $wtf;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-}
+    background: rgb(106, 106, 106);
+    background: linear-gradient(
+      90deg,
+      rgba(106, 106, 106, 1) 0%,
+      rgba(203, 203, 203, 1) 33%,
+      rgba(100, 147, 200, 1) 100%
+    );
+  
+    /* background-color: #fefefe; */
+  }
+  
+  .navigation-header {
+    background-color: #4975a0;
+    color: #fff;
+    display: none;
+        &__link {
+            color: #fff;
+            display: block;
+          }
+        &__date {
+            /* display: inline-block; */
+            float: right;
+          }
+  }
+  
+  header {
+    min-height: 60px;
+  }
+  
+  .hamburger {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+
+
+  
+  .navigation--open {
+    display: block;
+  }
+  
+  h2 {
+    color: #1460aa;
+  }
+  
+  h3::before{
+    content: ' !! ';
+    color: red;
+  }
+  
+  .justify {
+    text-justify: auto;
+    text-align: justify;
+  }
+  
+  .main {
+    margin: 0 auto;
+    width: 1fr;
+        &__h1 {
+      
+            margin: 30px auto 0;
+          
+            justify-content: center;
+          }
+        &__header {
+            display: fixed;
+            min-height: 60px;
+            top: 0;
+            width: 100%;
+          }
+        &__image {
+            margin: 0 auto;
+            display: flex;
+            height: 50px;
+          }
+
+  }
+  
+
+  
+  .blog {
+    border: 1px solid #1460aa;
+    padding: 5px;
+  }
+  .bold {
+    font-weight: 900;
+  }
+  
+  .article {
+    padding: 10px 0;
+    border-bottom: double;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-areas:
+      "grid__h2 grid__h2"
+      "grid__h3 grid__text";
+    &__h2 {
+        grid-area: grid__h2;
+      }
+    &__h3 {
+        grid-area: grid__h3;
+      }
+    &__text {
+        grid-area: grid__text;
+      }
+
+  }
+  
+
+  
+  @media screen and (min-width: 1024px) {
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .main {
+        width: 1024px;
+
+        &__header {
+            display: flex;
+            min-height: 60px;
+        
+            width: 100%;
+          }
+        &__image {
+            height: 200px;
+          }
+      }
+    
+  
+ 
+    .navigation-header {
+      background-color: #4975a0;
+      color: #fff;
+      align-items: center;
+      display: flex;
+      
+      &__link {
+        margin-right: 30px;
+        color: #fff;
+        display: inline-flex;
+      }
+      &__date {
+        /* display: inline-block; */
+        float: right;
+      }
+
+
+    }
+       
+   
+    .hamburger {
+      display: none;
+    }
+    
+    
+  }
+  
