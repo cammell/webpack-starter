@@ -4,7 +4,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 module.exports = {
   /* here you can define another js file */
   entry: {
-    index: "./src/js/index.js",
+    
     main: "./src/js/main.js",
     
   },
@@ -80,25 +80,25 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/pages/index.html",
       inject: true,
-      chunks: ["index"],
+      chunks: ["main"],
       filename: "index.html",
     }),
     new HtmlWebpackPlugin({
       template: "./src/pages/web-camp.html",
       inject: true,
-      chunks: ["index", "web-camp"],
+      chunks: ["main"],
       filename: "web-camp.html",
     }),
     new HtmlWebpackPlugin({
       template: "./src/pages/wtf-css.html",
       inject: true,
-      chunks: ["index", "wtf-css"],
+      chunks: ["main"],
       filename: "wtf-css.html",
     }),
     new HtmlWebpackPlugin({
       template: "./src/pages/wtf-html.html",
       inject: true,
-      chunks: ["index", "wtf-html"],
+      chunks: ["main"],
       filename: "wtf-html.html",
     }),
 

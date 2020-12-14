@@ -1,3 +1,9 @@
+import moment from 'moment';
+import '../scss/main.scss';
+
+
+console.log('HELLO 🚀');
+
 const name="Pawel", 
         age=44;
 
@@ -8,6 +14,8 @@ document.querySelector('.navigation-header__date--js').innerHTML=date;
 
 //function homework week 5
 
+console.log("checking if main.js is executed");
+console.log(moment([2020, 0, 29]).toNow());
 
 
 function printNameAge(name, age) {
@@ -49,6 +57,13 @@ const addP = {
                 currentP.insertBefore(newP, null);
         },
 }
+
+window.addMoment =function () {
+        var newDiv=document.querySelector('.footer');
+       
+        var content=document.createTextNode('I have started this project ' + moment([2020, 0, 29]).toNow());
+        newDiv.appendChild(content);
+};
 
 const hamburger= document.querySelector('.hamburger--js');
 hamburger.addEventListener('click', () => {
