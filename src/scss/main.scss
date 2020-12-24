@@ -23,7 +23,10 @@ body {
             float: right;
           }
   }
-  
+  .footer {
+    display: flex;
+    justify-content: center;
+  }
   header {
     min-height: 60px;
   }
